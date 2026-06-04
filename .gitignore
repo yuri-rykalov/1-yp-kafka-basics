@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Virtual Environments
+venv*/
+
+# Custom Exceptions
+project_plan.md
+
+
 # User-specific files
 *.rsuser
 *.suo
