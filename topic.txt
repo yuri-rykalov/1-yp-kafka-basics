@@ -1,0 +1,20 @@
+1. topic creation command:
+docker compose exec kafka-0 kafka-topics.sh \                                                              
+  --create \
+  --topic energy-consumption \
+  --bootstrap-server kafka-0:9092 \
+  --partitions 3 \
+  --replication-factor 2
+
+2. topic info command:
+1-yp-kafka-basics % docker exec 1-yp-kafka-basics-kafka-0-1 \
+  kafka-topics.sh \
+  --describe \
+  --topic energy-consumption \
+  --bootstrap-server localhost:9092
+
+3. topic info result:
+Topic: energy-consumption       TopicId: Pr625bTVTf67n7kqNxDBIw PartitionCount: 3       ReplicationFactor: 2    Configs: 
+        Topic: energy-consumption       Partition: 0    Leader: 1       Replicas: 1,2   Isr: 1,2
+        Topic: energy-consumption       Partition: 1    Leader: 2       Replicas: 2,0   Isr: 2,0
+        Topic: energy-consumption       Partition: 2    Leader: 0       Replicas: 0,1   Isr: 0,1
